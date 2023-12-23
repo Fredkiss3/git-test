@@ -33,7 +33,7 @@ const repos = new Git(join(__dirname, "./repo"), {
     },
 });
 
-repos.on("push", async (push: PushData) => {
+repos.on("push", async (push) => {
     console.log(`push ${push.repo}/${push.commit} ( ${push.branch} )`);
 
     push.log();
